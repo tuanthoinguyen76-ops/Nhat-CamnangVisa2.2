@@ -1,14 +1,14 @@
 // Nhật-Visa PWA Service Worker
-const CACHE_NAME = 'nhat-visa-v1.0.0';
+const CACHE_NAME = 'nhat-visa-v1.0.1'; // Tăng version
 const RUNTIME_CACHE = 'nhat-visa-runtime';
 
-// Files to cache immediately
 const PRECACHE_URLS = [
   './',
   './index.html',
   './manifest.json',
-  'https://cdn.tailwindcss.com',
-  'https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js'
+  './icons/icon-192x192.png',
+  './icons/icon-512x512.png'
+  // BỎ CDN Tailwind vì nó không cache được
 ];
 
 // Install event - cache essential files
@@ -164,4 +164,5 @@ self.addEventListener('message', (event) => {
       })
     );
   }
+
 });
