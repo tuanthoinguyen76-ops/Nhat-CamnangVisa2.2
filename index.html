@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế</title>
+  <title>Tứ Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế</title>
   <!-- PWA Meta Tags -->
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./favicon.ico" sizes="any">
@@ -13,7 +13,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Nhật-Visa">
+<meta name="apple-mobile-web-app-title" content="Tứ Nhật-Visa">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <style>
@@ -318,7 +318,7 @@
       <a href="#home" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="closeMenu()">🏠 Trang chủ</a>
       <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('france'); closeMenu();">🇫🇷 Pháp</a>
       <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('italy'); closeMenu();">🇮🇹 Ý</a>
-      <div class="border-t mt-4 pt-4 text-xs muted">@Nhật - Phiên bản 2025</div>
+      <div class="border-t mt-4 pt-4 text-xs muted">@Nhật - Cẩm nang Phiên bản 2025</div>
     </nav>
   </aside>
 
@@ -410,7 +410,7 @@
                 <ul class="list-disc ml-5 text-sm space-y-1">
                   <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
                   <li>Không được mượn Hộ chiếu trong quá trình xét duyệt</li>
-                  <li>Hồ sơ sao y công chứng trên khổ giấy A4, không cắt nhỏ</li>
+                  <li>Hồ sơ sao y công chứng trên khổ giấy A4, không cắt nhỏ và dấu sao y không quá 3 tháng tính từ thời điểm nộp hồ sơ</li>
                   <li>Thời gian xét duyệt có thể khác nhau tùy từng hồ sơ và thời điểm</li>
                 </ul>
               </div>
@@ -459,9 +459,11 @@
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="doc-than">
               <h4 class="font-bold text-indigo-700 mb-3">Độc thân</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>CCCD / CMND, Giấy xác nhận cư trú (CT07/CT08)</li>
-                <li>Hộ chiếu còn hạn ≥6 tháng; Khai sinh nếu cần</li>
-                <li>Chứng minh tài chính độc lập: sao kê, sổ tiết kiệm</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Khai sinh (nếu cần)</li>
               </ul>
               <p class="text-sm text-gray-600 mt-2">💡 Tránh để tài chính phụ thuộc hoàn toàn vào người khác</p>
             </div>
@@ -469,18 +471,27 @@
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="ket-hon">
               <h4 class="font-bold text-indigo-700 mb-3">Kết hôn</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Giấy đăng ký kết hôn (công chứng); Hộ chiếu/CCCD cả hai</li>
+                <li>Giấy đăng ký kết hôn (công chứng)</li>
                 <li>Nếu kết hôn ở nước ngoài: bản dịch công chứng + hợp pháp hóa nếu cần</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
                 <li>Hồ sơ tài chính hai vợ chồng nếu đi cùng hoặc bảo lãnh lẫn nhau</li>
               </ul>
-              <p class="text-sm text-gray-600 mt-2">💡 Nên xin trích lục mới nếu giấy kết hôn đã lâu</p>
+              <p class="text-sm text-gray-600 mt-2">💡 Nên xin trích lục mới nếu giấy kết hôn trích lục đã lâu</p>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="ly-hon">
               <h4 class="font-bold text-indigo-700 mb-3">Ly hôn</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Quyết định ly hôn / bản án (bản sao công chứng); Khai sinh con nếu có</li>
-                <li>Thư giải trình (Cover Letter) nêu lý do và ràng buộc tại VN</li>
+                <li>Quyết định ly hôn / bản án ly hôn (bản sao công chứng)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Thư giải trình (Cover Letter) nêu lý do và ràng buộc tại VN (nếu cần)</li>
               </ul>
               <p class="text-sm text-gray-600 mt-2">💡 Nếu có con nhỏ, cần chứng minh quyền nuôi và ràng buộc gia đình</p>
             </div>
@@ -488,30 +499,36 @@
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="goa">
               <h4 class="font-bold text-indigo-700 mb-3">Góa</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Giấy chứng tử của vợ/chồng (bản công chứng), CCCD, khai sinh con</li>
+                <li>Giấy chứng tử của vợ/chồng (bản công chứng)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
               </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Trường hợp có người bảo lãnh (chồng, con), cần thêm giấy tờ chứng minh</p>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="con-nuoi">
               <h4 class="font-bold text-indigo-700 mb-3">Con nuôi / Giám hộ</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Quyết định nhận con nuôi, giấy tờ giám hộ, khai sinh cập nhật</li>
+                <li>Quyết định nhận con nuôi, giấy tờ giám hộ, khai sinh cập nhật(nếu có)</li>
               </ul>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="doi-ten">
               <h4 class="font-bold text-indigo-700 mb-3">Đổi tên</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Quyết định đổi tên, giấy tờ chứng minh tên cũ — tên mới, bản dịch công chứng nếu cần</li>
+                <li>Quyết định đổi tên, giấy tờ chứng minh tên cũ — tên mới, bản công chứng nếu cần</li>
               </ul>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="personal" data-item="tre-em">
               <h4 class="font-bold text-indigo-700 mb-3">Trẻ em đi cùng / đi một mình</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Giấy khai sinh, giấy đồng ý của cả cha mẹ (công chứng), thông tin người đón</li>
+                <li>Giấy khai sinh, giấy đồng ý của cả cha mẹ (công chứng), thông tin người được uỷ quyền dẫn đi</li>
               </ul>
-              <p class="text-sm text-gray-600 mt-2">💡 Giấy đồng ý phải công chứng bởi cả cha và mẹ (trừ trường hợp tòa án quy định khác)</p>
+              <p class="text-sm text-gray-600 mt-2">💡 Giấy đồng ý phải công chứng được ký bởi cả cha và mẹ (trừ trường hợp có quy định khác)</p>
             </div>
           </div>
         </section>
@@ -539,37 +556,41 @@
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="dang-lam">
               <h4 class="font-bold text-indigo-700 mb-3">Người đi làm (lương)</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Sao kê ngân hàng 3—6 tháng, bảng lương, hợp đồng lao động, xác nhận lương</li>
-                <li>Không nên mở sổ tiết kiệm lớn ngay trước khi nộp hồ sơ</li>
+                <li>Sao kê ngân hàng 3 tháng (tài khoản nhận lương)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có), kèm xác nhận lương 3 tháng gần nhất</li>
+                <li>Không nên mở sổ tiết kiệm lớn ngay trước khi nộp hồ sơ - sổ nên được mở trước ít nhất 3-6 tháng</li>
               </ul>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="chu-dn">
               <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp / hộ kinh doanh</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Giấy đăng ký kinh doanh, sao kê công ty, biên lai thuế GTGT/TNDN (nếu có), ảnh cơ sở</li>
-                <li>Nếu không có biên lai: giấy xác nhận không nợ thuế + tờ khai thuế in từ hệ thống</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản công ty (nếu chủ đứng tên 1 mình trên DKKD)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có)</li>
               </ul>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="freelancer">
               <h4 class="font-bold text-indigo-700 mb-3">Freelancer / Làm tự do</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Hợp đồng dịch vụ, sao kê tài khoản nhận thanh toán, hóa đơn, chứng minh khách hàng</li>
+                <li>Hợp đồng dịch vụ, hóa đơn bán hàng, chứng minh khác về nguồn thu nhập</li>
+                <li>Sao kê tài khoản nhận thanh toán 3 tháng</li>
                 <li>Chuẩn bị thư giải trình nguồn thu nhập</li>
               </ul>
             </div>
             
             <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="noi-tro">
-<h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
-<ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-<li>Thư bảo lãnh tài chính của người thân + sao kê, sổ tiết kiệm người bảo lãnh</li>
-</ul>
-</div>
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="bao-lanh">
-          <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh</h4>
-          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Thư bảo lãnh, CMND/hộ chiếu người bảo lãnh, sao kê, giấy tờ chứng minh quan hệ</li>
+            <h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
+                <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, ...) nếu không tự chứng minh được tài chính</li>
+                <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
+             </ul>
+            </div>
+          <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="bao-lanh">
+            <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh</h4>
+            <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, hợp đồng ...)</li>
+            <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
             <li>Lưu ý: Nên nộp kèm hồ sơ tài chính cá nhân</li>
           </ul>
         </div>
@@ -579,7 +600,7 @@
         <p class="font-semibold">💡 Lưu ý quan trọng:</p>
         <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
           <li>Tài chính nên tương ứng 100-150 triệu/người</li>
-          <li>Không nộp "sổ mới mở" sát ngày nộp</li>
+          <li>Không nên nộp "sổ mới mở" sát ngày nộp</li>
           <li>Lãnh sự quan tâm đến nguồn tiền - thời gian - tính ổn định hơn là số dư</li>
         </ul>
       </div>
@@ -608,7 +629,10 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="nhan-vien">
           <h4 class="font-bold text-indigo-700 mb-3">Nhân viên (HĐLĐ)</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Hợp đồng lao động, xác nhận việc làm, bảng lương 3 tháng, thư xác nhận nghỉ phép có dấu</li>
+            <li>Hợp đồng lao động có dấu</li>
+            <li>Xác nhận công việc có dấu</li>
+            <li>Bảng lương 3 tháng có dấu</li>
+            <li>Thư xác nhận nghỉ phép có dấu</li>
             <li>Nếu công ty nhỏ: thư xác nhận tay có chữ ký giám đốc + con dấu</li>
             <li>Toàn bộ hình chụp từ VSSID</li>
           </ul>
@@ -618,14 +642,19 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="chu-dn">
           <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Giấy phép kinh doanh, sao kê công ty, báo cáo thuế, hợp đồng, ảnh cơ sở</li>
+            <li>Giấy phép kinh doanh</li>
+            <li>Giấy phép kinh doanh</li>
+            <li>Biên lai thuế 3 tháng hoặc quý gần nhất</li>
+            <li>Báo cáo thuế 3 tháng, hợp đồng mua bán, ảnh cơ sở (nếu có) - trường hợp không phải đóng thuế hoặc khấu trừ thuế</li>
           </ul>
         </div>
         
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="can-bo">
           <h4 class="font-bold text-indigo-700 mb-3">Cán bộ, công chức</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Quyết định bổ nhiệm, giấy xác nhận công tác, giấy xác nhận nghỉ phép có đóng dấu cơ quan</li>
+            <li>Quyết định bổ nhiệm có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận công tác có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận nghỉ phép có đóng dấu cơ quan</li>
           </ul>
         </div>
         
@@ -633,6 +662,8 @@
           <h4 class="font-bold text-indigo-700 mb-3">Sinh viên</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Giấy xác nhận sinh viên, giấy xin nghỉ học, thư bảo lãnh tài chính của cha mẹ</li>
+            <li>Giấy xin nghỉ học</li>
+            <li>Thư bảo lãnh tài chính của cha mẹ</li>
           </ul>
         </div>
         
@@ -640,6 +671,8 @@
           <h4 class="font-bold text-indigo-700 mb-3">Người nghỉ hưu</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Sổ hưu, quyết định hưởng lương hưu, sao kê nhận lương hưu</li>
+            <li>Quyết định hưởng lương hưu/về hưu</li>
+            <li>VSSID quá trình đóng BHXH</li>
           </ul>
         </div>
       </div>
@@ -667,7 +700,9 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="dulich">
           <h4 class="font-bold text-indigo-700 mb-3">Du lịch (cá nhân / tour)</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Vé máy bay khứ hồi / booking, đặt phòng khách sạn, lịch trình chi tiết</li>
+            <li>Vé máy bay khứ hồi / booking</li>
+            <li>Xác nhận đặt phòng khách sạn</li>
+            <li>Lịch trình chi tiết</li>
             <li>Bảo hiểm du lịch (≥30.000 EUR)</li>
           </ul>
         </div>
@@ -675,8 +710,10 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="congtac">
           <h4 class="font-bold text-indigo-700 mb-3">Công tác / Hội nghị</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Thư mời, lịch trình hội nghị, giấy cử đi công tác của tổ chức VN</li>
-            <li>Chứng minh mối quan hệ hợp tác (hợp đồng, email)</li>
+            <li>Thư mời có đầy đủ thông tin người mời, người được mời</li>
+            <li>Lịch trình hội nghị có logo con dấu đi kèm</li>
+            <li>Giấy cử đi công tác của tổ chức/công ty người đi</li>
+            <li>Chứng minh mối quan hệ hợp tác giữa hai bên (hợp đồng,xác nhận, email,...)</li>
           </ul>
         </div>
         
@@ -685,6 +722,7 @@
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Thư mời/ quyết định thưởng của công ty, danh sách đoàn có dấu</li>
             <li>Xác nhận công ty chi trả chi phí (nếu có)</li>
+            <li>Bộ hồ sơ tài chính của công ty chi trả</li>
           </ul>
         </div>
         
@@ -726,8 +764,8 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="special" data-item="missing-docs">
           <h4 class="font-bold text-indigo-700 mb-3">Thiếu giấy tờ phổ biến</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Mất hộ khẩu: dùng CT07/CT08 hoặc hợp đồng thuê nhà + hóa đơn điện nước</li>
-            <li>Không có sổ tiết kiệm: sao kê ngân hàng + thư bảo lãnh</li>
+            <li>Mất hộ khẩu: dùng CT07/CT08</li>
+            <li>Không có sổ tiết kiệm: sao kê ngân hàng + bộ hồ sơ bảo lãnh</li>
           </ul>
         </div>
         
@@ -784,21 +822,13 @@
           <h4 class="font-bold text-indigo-700 mb-3">Người đi làm mới đổi công ty</h4>
           <div class="bg-yellow-50 p-3 rounded mt-2">
             <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
-            <p class="text-sm">Đổi công ty: nộp hợp đồng cũ + mới, giải thích trong thư</p>
+            <p class="text-sm">Đổi công ty: nộp hợp đồng cũ + mới, thư giải trình, VSSID đầy đủ thu nhập từ 2 công ty</p>
           </div>
         </div>
         
         <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="france" data-group="cases">
           <h4 class="font-bold text-indigo-700 mb-3">Mất hộ chiếu cũ</h4>
-          <div class="bg-yellow-50 p-3 rounded mt-2">
-            <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
-            <p class="text-sm">Visa cũ: scan visa + tờ khai xuất nhập cảnh cũ</p>
-          </div>
-          <div class="bg-green-50 p-3 rounded mt-2">
-            <p class="font-semibold text-green-700 mb-2">✓ Hồ sơ đề xuất:</p>
-            <p class="text-sm">Visa cũ không còn: có thể tra dấu xuất nhập cảnh để minh chứng</p>
-          </div>
-          <div class="info-box mt-2">
+            <div class="info-box mt-2">
             <p class="text-sm">💡 HC cũ mất có thể nộp bản photo, scan HC cũ/visa cũ hoặc hình ảnh du lịch trước đây</p>
           </div>
         </div>
@@ -807,7 +837,7 @@
           <h4 class="font-bold text-indigo-700 mb-3">Người làm việc tự do online / Freelancer</h4>
           <div class="bg-yellow-50 p-3 rounded mt-2">
             <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
-            <p class="text-sm">Freelancer: hợp đồng dịch vụ / thanh toán quốc tế PayPal / sao kê nhận tiền</p>
+            <p class="text-sm">Freelancer: hợp đồng dịch vụ / thanh toán quốc tế PayPal / sao kê nhận tiền ...</p>
           </div>
         </div>
       </div>
@@ -834,7 +864,7 @@
           <div class="bg-white rounded p-3">
             <p class="font-semibold text-gray-800 mb-2">Hồ sơ bổ sung:</p>
             <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
-              <li>Giấy tờ pháp lý của công ty mời: giấy ĐKKD, tax code hoặc website chính thức</li>
+              <li>Giấy tờ pháp lý của công ty mời: giấy DKKD, tax code hoặc website chính thức</li>
               <li>Chứng minh mối quan hệ hợp tác: hợp đồng, email trao đổi, biên bản làm việc</li>
               <li>Nếu thư mời bằng tiếng nước sở tại → nên có bản dịch tiếng Anh song ngữ</li>
             </ul>
@@ -909,127 +939,6 @@
       </div>
     </section>
 
-    <!-- Phụ lục -->
-    <section class="card fade">
-      <h3 class="section-title">📚 Phụ lục: Hướng dẫn Hợp pháp hóa lãnh sự & Sao y giấy tờ</h3>
-      
-      <div class="space-y-4">
-        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-          <h4 class="font-bold text-blue-800 mb-2">Hợp pháp hóa lãnh sự là gì?</h4>
-          <p class="text-sm text-gray-700">Là thủ tục <strong>xác nhận con dấu, chữ ký, chức danh</strong> của người có thẩm quyền trên giấy tờ, để <strong>giấy tờ Việt Nam được công nhận hợp pháp tại nước ngoài</strong>, hoặc ngược lại.</p>
-          <div class="mt-3 bg-white p-3 rounded">
-            <p class="text-sm text-gray-700"><strong>💡 Lưu ý quan trọng:</strong> Mọi giấy tờ do cơ quan VN cấp (giấy khai sinh, kết hôn, học tập, công việc, tư pháp...) mà <strong>dùng ở nước ngoài</strong> đều cần hợp pháp hóa (trừ khi nước đó có <strong>miễn song phương</strong> như Pháp, Tây Ban Nha, Ý...).</p>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Các loại giấy tờ thường cần hợp pháp hóa</h4>
-          <div class="grid md:grid-cols-2 gap-3">
-            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
-              <li>Giấy khai sinh / Giấy chứng nhận kết hôn / Giấy ly hôn</li>
-              <li>Giấy xác nhận độc thân</li>
-              <li>Giấy xác nhận công việc của cơ quan nhà nước</li>
-              <li>Bằng cấp / chứng chỉ</li>
-            </ul>
-            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
-              <li>Giấy tờ tư pháp (phiếu lý lịch tư pháp, án lệ...)</li>
-              <li>Giấy DKKD</li>
-            </ul>
-          </div>
-          <div class="mt-3 bg-yellow-50 p-3 rounded">
-            <p class="text-sm"><strong>⚠️ Lưu ý:</strong></p>
-            <ul class="list-disc ml-5 text-sm mt-1 space-y-1 text-gray-700">
-              <li><strong>Giấy tờ do công ty TNHH, tư nhân, trường tư</strong> cấp → chỉ cần <strong>công chứng / sao y</strong>, KHÔNG hợp pháp hóa được</li>
-              <li><strong>Giấy tờ do cơ quan nhà nước cấp</strong> (UBND, Sở, Bộ, trường công...) → <strong>hợp pháp hóa</strong>. Lưu ý chữ ký người ký sao y phải có đăng ký với <strong>Bộ Ngoại giao (Hà Nội)</strong> hoặc <strong>Sở Ngoại vụ TP.HCM</strong></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Thời gian xử lý hợp pháp hóa lãnh sự</h4>
-          <p class="text-sm text-gray-700 mb-2"><strong>Tại Cục Lãnh sự - Bộ Ngoại giao (Hà Nội)</strong> hoặc <strong>Sở Ngoại vụ TP.HCM</strong></p>
-          <p class="text-sm text-gray-700">Thời gian: <strong>5 ngày làm việc</strong> (không tính cuối tuần, lễ), thời gian có thể kéo dài 7-10 ngày</p>
-          <div class="mt-3 bg-blue-50 p-3 rounded">
-            <p class="text-sm text-gray-700">💡 Một số nước yêu cầu bản dịch cũng cần có dấu <strong>hợp pháp hoá lãnh sự</strong></p>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Cơ quan thực hiện - Quy trình 4 bước</h4>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3">
-              <div class="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
-              <div>
-                <p class="font-semibold text-gray-800">Công chứng / sao y bản gốc</p>
-                <p class="text-sm text-gray-600">Tại <strong>phòng công chứng hoặc UBND phường</strong></p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
-              <div>
-                <p class="font-semibold text-gray-800">Dịch thuật công chứng</p>
-                <p class="text-sm text-gray-600">(nếu cần)</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
-              <div>
-                <p class="font-semibold text-gray-800">Nộp tại Cục Lãnh sự - Bộ Ngoại giao (Hà Nội) hoặc Sở Ngoại vụ TP.HCM</p>
-                <p class="text-sm text-gray-600">Để đóng dấu <strong>hợp pháp hóa</strong></p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">4</div>
-              <div>
-                <p class="font-semibold text-gray-800">Nộp sang Đại sứ quán / Lãnh sự quán nước xin visa VN</p>
-                <p class="text-sm text-gray-600">(nếu cần)</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-4 bg-green-50 p-3 rounded">
-            <p class="text-sm text-gray-700">💡 Một số nước <strong>chấp nhận dấu Bộ Ngoại giao VN là đủ</strong>, không cần qua Đại sứ quán (ví dụ: Hàn Quốc, Nhật, Đức, Ý, Tây Ban Nha)</p>
-            <p class="text-sm text-gray-700 mt-2">💡 Nên kiểm tra trước <strong>quy định riêng từng nước</strong> (một số giấy tờ LSQ/DSQ cần dấu Hợp pháp hoá tại LSQ/DSQ tại VN)</p>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Sao y bản chính / bản sao công chứng hợp lệ</h4>
-          <p class="text-sm text-gray-700 mb-3">Bản sao y phải được cấp bởi:</p>
-          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li><strong>Phòng công chứng / văn phòng công chứng hợp pháp</strong></li>
-            <li><strong>UBND phường / xã / thị trấn</strong></li>
-            <li><strong>Cơ quan cấp giấy tờ gốc</strong> (nếu có dịch vụ sao y, trích lục)</li>
-          </ul>
-          <div class="mt-3 bg-red-50 p-3 rounded">
-            <p class="text-sm text-gray-700"><strong>❌ Không chấp nhận bản photocopy không có dấu đỏ</strong></p>
-            <p class="text-sm text-gray-700 mt-2">💡 Nếu dịch công chứng → bản gốc và bản sao y phải đi kèm khi nộp</p>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Thời hạn hiệu lực của giấy tờ hợp pháp hóa</h4>
-          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li><strong>Tại thời điểm nộp hồ sơ visa, giấy tờ hợp pháp hóa phải còn giá trị trong 6 tháng</strong> kể từ ngày ký / cấp</li>
-            <li>Giấy tờ như "Giấy xác nhận độc thân" chỉ có giá trị 6 tháng kể từ ngày cấp</li>
-          </ul>
-          <div class="mt-3 bg-yellow-50 p-3 rounded">
-            <p class="text-sm text-gray-700">⚠️ Một số LSQ (Pháp, Ý, Đức, v.v...) chỉ chấp nhận giấy tờ "mới" trong 3 tháng. (tốt nhất nên chuẩn bị hồ sơ trong vòng 3 tháng trở lại)</p>
-            <p class="text-sm text-gray-700 mt-2">💡 Nếu giấy tờ cũ quá 6 tháng → cần xin lại bản mới</p>
-          </div>
-        </div>
-        
-        <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Lưu ý kỹ thuật khi dịch & hợp pháp hóa</h4>
-          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Tên, số CMND, địa chỉ phải <strong>thống nhất giữa các giấy tờ</strong></li>
-            <li>Bản dịch tiếng Anh nên dùng <strong>thuật ngữ hành chính chuẩn</strong></li>
-          </ul>
-          <div class="mt-3 bg-blue-50 p-3 rounded">
-            <p class="text-sm text-gray-700">💡 Nếu nhiều giấy tờ giống nhau (VD: nhiều khai sinh con - cùng 1 người) → hợp pháp hóa 1 bản, các bản khác chỉ cần bản sao</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </div>
 </div>
@@ -1090,8 +999,8 @@
             <ul class="list-disc ml-5 text-sm space-y-1">
               <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
               <li>Không được mượn Hộ chiếu trong quá trình xét duyệt</li>
-              <li>Hồ sơ sao y công chứng trên khổ giấy A4, không cắt nhỏ</li>
-              <li>Các giấy tờ * bao gồm: "Đăng ký kinh doanh", "khai sinh" cần được hợp pháp hoá lãnh sự</li>
+              <li>Hồ sơ sao y công chứng trên khổ giấy A4, không cắt nhỏ và dấu sao y không quá 3 tháng tính từ thời điểm nộp hồ sơ</li>
+              <li>Các giấy tờ bao gồm: "Đăng ký kinh doanh", "khai sinh" cần được hợp pháp hoá lãnh sự</li>
               <li>Trường hợp trẻ em không đi cùng với cha/mẹ cần ký giấy đồng thuận trực tiếp tại DSQ/LSQ. Giấy đồng thuận cần ký trước khi nộp hồ sơ tại trung tâm VFS</li>
             </ul>
           </div>
@@ -1115,7 +1024,7 @@
       </div>
     </section>
 
-    <!-- Các section hồ sơ cho Ý tương tự Pháp -->
+ 
     <!-- 1. Hồ sơ cá nhân -->
     <section class="card fade">
       <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
@@ -1141,9 +1050,11 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="personal" data-item="doc-than">
           <h4 class="font-bold text-indigo-700 mb-3">Độc thân</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>CCCD / CMND, Giấy xác nhận cư trú (CT07/CT08)</li>
-            <li>Hộ chiếu còn hạn ≥6 tháng; Khai sinh nếu cần</li>
-            <li>Chứng minh tài chính độc lập: sao kê, sổ tiết kiệm</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Khai sinh (nếu cần)</li>
           </ul>
           <p class="text-sm text-gray-600 mt-2">💡 Tránh để tài chính phụ thuộc hoàn toàn vào người khác</p>
         </div>
@@ -1151,27 +1062,41 @@
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="personal" data-item="ket-hon">
           <h4 class="font-bold text-indigo-700 mb-3">Kết hôn</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Giấy đăng ký kết hôn (công chứng); Hộ chiếu/CCCD cả hai</li>
-            <li>Nếu kết hôn ở nước ngoài: bản dịch công chứng + hợp pháp hóa nếu cần</li>
-            <li>Hồ sơ tài chính hai vợ chồng nếu đi cùng hoặc bảo lãnh lẫn nhau</li>
-          </ul>
+                <li>Giấy đăng ký kết hôn (công chứng)</li>
+                <li>Nếu kết hôn ở nước ngoài: bản dịch công chứng + hợp pháp hóa nếu cần</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hồ sơ tài chính hai vợ chồng nếu đi cùng hoặc bảo lãnh lẫn nhau</li>
+              </ul>
           <p class="text-sm text-gray-600 mt-2">💡 Nên xin trích lục mới nếu giấy kết hôn đã lâu</p>
         </div>
         
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="personal" data-item="ly-hon">
           <h4 class="font-bold text-indigo-700 mb-3">Ly hôn</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Quyết định ly hôn / bản án (bản sao công chứng); Khai sinh con nếu có</li>
-            <li>Thư giải trình (Cover Letter) nêu lý do và ràng buộc tại VN</li>
-          </ul>
+                <li>Quyết định ly hôn / bản án ly hôn (bản sao công chứng)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Thư giải trình (Cover Letter) nêu lý do và ràng buộc tại VN (nếu cần)</li>
+              </ul>
           <p class="text-sm text-gray-600 mt-2">💡 Nếu có con nhỏ, cần chứng minh quyền nuôi và ràng buộc gia đình</p>
         </div>
         
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="personal" data-item="goa">
           <h4 class="font-bold text-indigo-700 mb-3">Góa</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Giấy chứng tử của vợ/chồng (bản công chứng), CCCD, khai sinh con</li>
-          </ul>
+                <li>Giấy chứng tử của vợ/chồng (bản công chứng)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+        </ul>
         </div>
         
         <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="personal" data-item="con-nuoi">
@@ -1203,8 +1128,8 @@
           <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
             <h3 class="section-title">💰 2. Hồ sơ tài chính</h3>
             <div class="flex gap-2 items-center flex-wrap">
-              <input id="france-financial-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
-              <select id="france-financial-filter" class="border rounded p-2 text-sm">
+              <input id="italy-financial-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="italy-financial-filter" class="border rounded p-2 text-sm">
                 <option value="all">— Tất cả —</option>
                 <option value="dang-lam">Đang đi làm</option>
                 <option value="chu-dn">Chủ doanh nghiệp</option>
@@ -1212,46 +1137,50 @@
                 <option value="noi-tro">Nội trợ</option>
                 <option value="bao-lanh">Người được bảo lãnh</option>
               </select>
-              <button onclick="showAllItems('france', 'financial')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
-              <button onclick="resetFilter('france', 'financial')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+              <button onclick="showAllItems('italy', 'financial')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('italy', 'financial')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
             </div>
           </div>
           
           <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="dang-lam">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="financial" data-item="dang-lam">
               <h4 class="font-bold text-indigo-700 mb-3">Người đi làm (lương)</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Sao kê ngân hàng 3—6 tháng, bảng lương, hợp đồng lao động, xác nhận lương</li>
-                <li>Không nên mở sổ tiết kiệm lớn ngay trước khi nộp hồ sơ</li>
+                <li>Sao kê ngân hàng 3 tháng (tài khoản nhận lương)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có), kèm xác nhận lương 3 tháng gần nhất</li>
+                <li>Không nên mở sổ tiết kiệm lớn ngay trước khi nộp hồ sơ - sổ nên được mở trước ít nhất 3-6 tháng</li>
               </ul>
             </div>
             
-            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="chu-dn">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="financial" data-item="chu-dn">
               <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp / hộ kinh doanh</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Giấy đăng ký kinh doanh, sao kê công ty, biên lai thuế GTGT/TNDN (nếu có), ảnh cơ sở</li>
-                <li>Nếu không có biên lai: giấy xác nhận không nợ thuế + tờ khai thuế in từ hệ thống</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản công ty (nếu chủ đứng tên 1 mình trên DKKD)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có)</li>
               </ul>
             </div>
             
-            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="freelancer">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="financial" data-item="freelancer">
               <h4 class="font-bold text-indigo-700 mb-3">Freelancer / Làm tự do</h4>
               <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-                <li>Hợp đồng dịch vụ, sao kê tài khoản nhận thanh toán, hóa đơn, chứng minh khách hàng</li>
+                <li>Hợp đồng dịch vụ, hóa đơn bán hàng, chứng minh khác về nguồn thu nhập</li>
+                <li>Sao kê tài khoản nhận thanh toán 3 tháng</li>
                 <li>Chuẩn bị thư giải trình nguồn thu nhập</li>
               </ul>
             </div>
             
-            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="noi-tro">
-<h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
-<ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-<li>Thư bảo lãnh tài chính của người thân + sao kê, sổ tiết kiệm người bảo lãnh</li>
-</ul>
-</div>
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="financial" data-item="bao-lanh">
-          <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh</h4>
-          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Thư bảo lãnh, CMND/hộ chiếu người bảo lãnh, sao kê, giấy tờ chứng minh quan hệ</li>
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="financial" data-item="noi-tro">
+            <h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
+                <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, ...) nếu không tự chứng minh được tài chính</li>
+                <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
+             </ul>
+            </div>
+          <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="financial" data-item="bao-lanh">
+            <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh</h4>
+            <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, hợp đồng ...)</li>
+            <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
             <li>Lưu ý: Nên nộp kèm hồ sơ tài chính cá nhân</li>
           </ul>
         </div>
@@ -1261,7 +1190,7 @@
         <p class="font-semibold">💡 Lưu ý quan trọng:</p>
         <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
           <li>Tài chính nên tương ứng 100-150 triệu/người</li>
-          <li>Không nộp "sổ mới mở" sát ngày nộp</li>
+          <li>Không nên nộp "sổ mới mở" sát ngày nộp</li>
           <li>Lãnh sự quan tâm đến nguồn tiền - thời gian - tính ổn định hơn là số dư</li>
         </ul>
       </div>
@@ -1272,8 +1201,8 @@
       <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
         <h3 class="section-title">💼 3. Hồ sơ công việc</h3>
         <div class="flex gap-2 items-center flex-wrap">
-          <input id="france-employment-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
-          <select id="france-employment-filter" class="border rounded p-2 text-sm">
+          <input id="italy-employment-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="italy-employment-filter" class="border rounded p-2 text-sm">
             <option value="all">— Tất cả —</option>
             <option value="nhan-vien">Nhân viên</option>
             <option value="chu-dn">Chủ doanh nghiệp</option>
@@ -1281,47 +1210,60 @@
             <option value="sinh-vien">Sinh viên</option>
             <option value="nghi-huu">Nghỉ hưu</option>
           </select>
-          <button onclick="showAllItems('france', 'employment')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
-          <button onclick="resetFilter('france', 'employment')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+          <button onclick="showAllItems('italy', 'employment')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('italy', 'employment')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
         </div>
       </div>
       
+
       <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="nhan-vien">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="employment" data-item="nhan-vien">
           <h4 class="font-bold text-indigo-700 mb-3">Nhân viên (HĐLĐ)</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Hợp đồng lao động, xác nhận việc làm, bảng lương 3 tháng, thư xác nhận nghỉ phép có dấu</li>
+            <li>Hợp đồng lao động có dấu</li>
+            <li>Xác nhận công việc có dấu</li>
+            <li>Bảng lương 3 tháng có dấu</li>
+            <li>Thư xác nhận nghỉ phép có dấu</li>
             <li>Nếu công ty nhỏ: thư xác nhận tay có chữ ký giám đốc + con dấu</li>
             <li>Toàn bộ hình chụp từ VSSID</li>
           </ul>
           <p class="text-sm text-gray-600 mt-2">💡 Thư xác nhận cần có ngày nghỉ phép trùng với thời gian du lịch</p>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="chu-dn">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="employment" data-item="chu-dn">
           <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Giấy phép kinh doanh, sao kê công ty, báo cáo thuế, hợp đồng, ảnh cơ sở</li>
+            <li>Giấy phép kinh doanh</li>
+            <li>Giấy phép kinh doanh</li>
+            <li>Biên lai thuế 3 tháng hoặc quý gần nhất</li>
+            <li>Báo cáo thuế 3 tháng, hợp đồng mua bán, ảnh cơ sở (nếu có) - trường hợp không phải đóng thuế hoặc khấu trừ thuế</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="can-bo">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="employment" data-item="can-bo">
           <h4 class="font-bold text-indigo-700 mb-3">Cán bộ, công chức</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Quyết định bổ nhiệm, giấy xác nhận công tác, giấy xác nhận nghỉ phép có đóng dấu cơ quan</li>
+            <li>Quyết định bổ nhiệm có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận công tác có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận nghỉ phép có đóng dấu cơ quan</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="sinh-vien">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="employment" data-item="sinh-vien">
           <h4 class="font-bold text-indigo-700 mb-3">Sinh viên</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Giấy xác nhận sinh viên, giấy xin nghỉ học, thư bảo lãnh tài chính của cha mẹ</li>
+            <li>Giấy xin nghỉ học</li>
+            <li>Thư bảo lãnh tài chính của cha mẹ</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="employment" data-item="nghi-huu">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="employment" data-item="nghi-huu">
           <h4 class="font-bold text-indigo-700 mb-3">Người nghỉ hưu</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Sổ hưu, quyết định hưởng lương hưu, sao kê nhận lương hưu</li>
+            <li>Quyết định hưởng lương hưu/về hưu</li>
+            <li>VSSID quá trình đóng BHXH</li>
           </ul>
         </div>
       </div>
@@ -1332,45 +1274,50 @@
       <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
         <h3 class="section-title">✈️ 4. Hồ sơ chuyến đi</h3>
         <div class="flex gap-2 items-center flex-wrap">
-          <input id="france-travel-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
-          <select id="france-travel-filter" class="border rounded p-2 text-sm">
+          <input id="italy-travel-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="italy-travel-filter" class="border rounded p-2 text-sm">
             <option value="all">— Tất cả —</option>
             <option value="dulich">Du lịch</option>
             <option value="congtac">Công tác</option>
             <option value="incentive">Incentive trip</option>
             <option value="tham-than">Thăm thân</option>
           </select>
-          <button onclick="showAllItems('france', 'travel')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
-          <button onclick="resetFilter('france', 'travel')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+          <button onclick="showAllItems('italy', 'travel')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('italy', 'travel')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
         </div>
       </div>
       
       <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="dulich">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="travel" data-item="dulich">
           <h4 class="font-bold text-indigo-700 mb-3">Du lịch (cá nhân / tour)</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Vé máy bay khứ hồi / booking, đặt phòng khách sạn, lịch trình chi tiết</li>
+            <li>Vé máy bay khứ hồi / booking</li>
+            <li>Xác nhận đặt phòng khách sạn</li>
+            <li>Lịch trình chi tiết</li>
             <li>Bảo hiểm du lịch (≥30.000 EUR)</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="congtac">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="travel" data-item="congtac">
           <h4 class="font-bold text-indigo-700 mb-3">Công tác / Hội nghị</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
-            <li>Thư mời, lịch trình hội nghị, giấy cử đi công tác của tổ chức VN</li>
-            <li>Chứng minh mối quan hệ hợp tác (hợp đồng, email)</li>
+            <li>Thư mời có đầy đủ thông tin người mời, người được mời</li>
+            <li>Lịch trình hội nghị có logo con dấu đi kèm</li>
+            <li>Giấy cử đi công tác của tổ chức/công ty người đi</li>
+            <li>Chứng minh mối quan hệ hợp tác giữa hai bên (hợp đồng,xác nhận, email,...)</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="incentive">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="travel" data-item="incentive">
           <h4 class="font-bold text-indigo-700 mb-3">Incentive trip</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Thư mời/ quyết định thưởng của công ty, danh sách đoàn có dấu</li>
             <li>Xác nhận công ty chi trả chi phí (nếu có)</li>
+            <li>Bộ hồ sơ tài chính của công ty chi trả</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="travel" data-item="tham-than">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="travel" data-item="tham-than">
           <h4 class="font-bold text-indigo-700 mb-3">Thăm thân</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Thư mời của người thân, bản sao hộ chiếu/giấy tờ cư trú người mời, giấy tờ chứng minh quan hệ</li>
@@ -1392,20 +1339,20 @@
       <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
         <h3 class="section-title">⭐ 5. Hồ sơ đặc biệt</h3>
         <div class="flex gap-2 items-center flex-wrap">
-          <input id="france-special-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
-          <select id="france-special-filter" class="border rounded p-2 text-sm">
+          <input id="italy-special-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="italy-special-filter" class="border rounded p-2 text-sm">
             <option value="all">— Tất cả —</option>
             <option value="missing-docs">Thiếu giấy tờ</option>
             <option value="visa-refused">Bị từ chối visa</option>
             <option value="relative-abroad">Có người thân ở nước ngoài</option>
           </select>
-          <button onclick="showAllItems('france', 'special')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
-          <button onclick="resetFilter('france', 'special')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+          <button onclick="showAllItems('italy', 'special')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('italy', 'special')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
         </div>
       </div>
       
       <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="special" data-item="missing-docs">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="special" data-item="missing-docs">
           <h4 class="font-bold text-indigo-700 mb-3">Thiếu giấy tờ phổ biến</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Mất hộ khẩu: dùng CT07/CT08 hoặc hợp đồng thuê nhà + hóa đơn điện nước</li>
@@ -1413,14 +1360,14 @@
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="special" data-item="visa-refused">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="special" data-item="visa-refused">
           <h4 class="font-bold text-indigo-700 mb-3">Đã bị từ chối visa</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Chuẩn bị thư giải trình, bổ sung giấy tờ còn thiếu, trung thực khi khai hồ sơ</li>
           </ul>
         </div>
         
-        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="france" data-group="special" data-item="relative-abroad">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="italy" data-group="special" data-item="relative-abroad">
           <h4 class="font-bold text-indigo-700 mb-3">Có người thân ở nước đến</h4>
           <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
             <li>Thư mời + chứng minh quan hệ; chứng minh ràng buộc tại VN (việc làm, tài sản)</li>
@@ -1439,14 +1386,14 @@
       <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
         <h3 class="section-title">📝 6. Trường hợp thực tế bổ sung</h3>
         <div class="flex gap-2 items-center flex-wrap">
-          <input id="france-cases-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
-          <button onclick="showAllItems('france', 'cases')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
-          <button onclick="resetFilter('france', 'cases')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+          <input id="italy-cases-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <button onclick="showAllItems('italy', 'cases')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('italy', 'cases')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
         </div>
       </div>
       
       <div class="space-y-4">
-        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="france" data-group="cases">
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="italy" data-group="cases">
           <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp mới mở DKKD dưới 6 tháng</h4>
           <p class="text-sm text-gray-600 mb-2">Chưa có sao kê, chưa nộp thuế</p>
           <div class="bg-yellow-50 p-3 rounded mt-2">
@@ -1462,7 +1409,7 @@
           </div>
         </div>
         
-        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="france" data-group="cases">
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="italy" data-group="cases">
           <h4 class="font-bold text-indigo-700 mb-3">Người đi làm mới đổi công ty</h4>
           <div class="bg-yellow-50 p-3 rounded mt-2">
             <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
@@ -1470,7 +1417,7 @@
           </div>
         </div>
         
-        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="france" data-group="cases">
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="italy" data-group="cases">
           <h4 class="font-bold text-indigo-700 mb-3">Mất hộ chiếu cũ</h4>
           <div class="bg-yellow-50 p-3 rounded mt-2">
             <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
@@ -1485,7 +1432,7 @@
           </div>
         </div>
         
-        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="france" data-group="cases">
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="italy" data-group="cases">
           <h4 class="font-bold text-indigo-700 mb-3">Người làm việc tự do online / Freelancer</h4>
           <div class="bg-yellow-50 p-3 rounded mt-2">
             <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
@@ -1600,28 +1547,22 @@
           <h4 class="font-bold text-blue-800 mb-2">Hợp pháp hóa lãnh sự là gì?</h4>
           <p class="text-sm text-gray-700">Là thủ tục <strong>xác nhận con dấu, chữ ký, chức danh</strong> của người có thẩm quyền trên giấy tờ, để <strong>giấy tờ Việt Nam được công nhận hợp pháp tại nước ngoài</strong>, hoặc ngược lại.</p>
           <div class="mt-3 bg-white p-3 rounded">
-            <p class="text-sm text-gray-700"><strong>💡 Lưu ý quan trọng:</strong> Mọi giấy tờ do cơ quan VN cấp (giấy khai sinh, kết hôn, học tập, công việc, tư pháp...) mà <strong>dùng ở nước ngoài</strong> đều cần hợp pháp hóa (trừ khi nước đó có <strong>miễn song phương</strong> như Pháp, Tây Ban Nha, Ý...).</p>
+            <p class="text-sm text-gray-700"><strong>💡 Lưu ý quan trọng:</strong> Mọi giấy tờ do cơ quan VN cấp (giấy khai sinh, kết hôn, học tập, công việc, tư pháp...) mà <strong>dùng ở nước ngoài</strong> đều cần hợp pháp hóa.</p>
           </div>
         </div>
         
         <div class="bg-white border-2 border-gray-200 rounded-lg p-4">
-          <h4 class="font-bold text-gray-800 mb-3">Các loại giấy tờ thường cần hợp pháp hóa</h4>
+          <h4 class="font-bold text-gray-800 mb-3">Các loại giấy tờ cần hợp pháp hóa</h4>
           <div class="grid md:grid-cols-2 gap-3">
             <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
-              <li>Giấy khai sinh / Giấy chứng nhận kết hôn / Giấy ly hôn</li>
-              <li>Giấy xác nhận độc thân</li>
-              <li>Giấy xác nhận công việc của cơ quan nhà nước</li>
-              <li>Bằng cấp / chứng chỉ</li>
-            </ul>
-            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
-              <li>Giấy tờ tư pháp (phiếu lý lịch tư pháp, án lệ...)</li>
+              <li>Giấy khai sinh</li>
               <li>Giấy DKKD</li>
             </ul>
           </div>
           <div class="mt-3 bg-yellow-50 p-3 rounded">
             <p class="text-sm"><strong>⚠️ Lưu ý:</strong></p>
             <ul class="list-disc ml-5 text-sm mt-1 space-y-1 text-gray-700">
-              <li><strong>Giấy tờ do công ty TNHH, tư nhân, trường tư</strong> cấp → chỉ cần <strong>công chứng / sao y</strong>, KHÔNG hợp pháp hóa được</li>
+              <li><strong>Giấy tờ do công ty TNHH, tư nhân, trường tư</strong> cấp → KHÔNG hợp pháp hóa được</li>
               <li><strong>Giấy tờ do cơ quan nhà nước cấp</strong> (UBND, Sở, Bộ, trường công...) → <strong>hợp pháp hóa</strong>. Lưu ý chữ ký người ký sao y phải có đăng ký với <strong>Bộ Ngoại giao (Hà Nội)</strong> hoặc <strong>Sở Ngoại vụ TP.HCM</strong></li>
             </ul>
           </div>
