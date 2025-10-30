@@ -1,21 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tứ Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế V2.2</title>
-  <!-- PWA Meta Tags -->
-<link rel="manifest" href="./manifest.json">
-<link rel="icon" href="./favicon.ico" sizes="any">
-<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="./icons/icon-192x192.png">
-<meta name="theme-color" content="#4f46e5">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Tứ Nhật-Visa">
+  <title>Tứ Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế V2.3</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <meta name="theme-color" content="#4f46e5">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <style>
     :root{
       --indigo-600: #4f46e5;
@@ -32,20 +25,18 @@
       padding: 1.5rem; 
       margin-bottom: 1rem;
     }
-    .muted { color: var(--muted); }
     .fade { animation: fadeIn .28s ease-in-out; }
     @keyframes fadeIn { from {opacity:0; transform:translateY(6px)} to {opacity:1; transform:none} }
     
-    /* Sidebar styles */
     .sidebar {
       position: fixed;
       top: 0;
       left: 0;
       height: 100vh;
-      width: 260px;
+      width: 280px;
       background: white;
       box-shadow: 2px 0 10px rgba(15,23,42,0.08);
-      transform: translateX(-260px);
+      transform: translateX(-280px);
       transition: transform 0.3s ease;
       z-index: 100;
       overflow-y: auto;
@@ -62,10 +53,6 @@
       padding: 2rem 1rem;
     }
     
-    .content-wrap.shifted {
-      margin-left: 260px;
-    }
-    
     .menu-toggle {
       position: fixed;
       top: 1rem;
@@ -76,11 +63,6 @@
       padding: 0.75rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       cursor: pointer;
-      transition: left 0.3s ease;
-    }
-    
-    .menu-toggle.shifted {
-      left: 271px;
     }
     
     .overlay {
@@ -101,7 +83,6 @@
       visibility: visible;
     }
     
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -112,7 +93,6 @@
       background: rgba(0,0,0,0.6);
       z-index: 1000;
       overflow-y: auto;
-      animation: fadeIn 0.3s ease;
     }
     
     .modal.active {
@@ -176,7 +156,6 @@
       transform: rotate(90deg);
     }
     
-    /* Country cards */
     .country-card {
       background: white;
       border-radius: 1rem;
@@ -215,7 +194,6 @@
       margin-bottom: 1rem;
     }
     
-    /* Section styles */
     .section-title {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       -webkit-background-clip: text;
@@ -254,7 +232,6 @@
       margin: 1rem 0;
     }
     
-    /* Scrollbar */
     .modal-content::-webkit-scrollbar {
       width: 8px;
     }
@@ -267,10 +244,6 @@
       background: #667eea;
       border-radius: 4px;
     }
-    
-    .modal-content::-webkit-scrollbar-thumb:hover {
-      background: #764ba2;
-    }
 
     @media (max-width: 768px) {
       .modal-content {
@@ -282,18 +255,11 @@
       .modal-body {
         padding: 1rem;
       }
-      .content-wrap.shifted {
-        margin-left: 0;
-      }
-      .menu-toggle.shifted {
-        left: 1rem;
-      }
     }
   </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
   
-  <!-- Menu Toggle Button -->
   <button class="menu-toggle" id="menuToggle">
     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -302,23 +268,42 @@
     </svg>
   </button>
 
-  <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
-  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <div class="flex items-center gap-3 mb-6">
       <div class="w-10 h-10 bg-indigo-600 rounded-md flex items-center justify-center text-white font-bold">NV</div>
       <div>
         <div class="text-sm font-bold">Visa Guide</div>
-        <div class="text-xs muted">Cẩm nang Visa quốc tế</div>
+        <div class="text-xs text-gray-500">Cẩm nang Visa quốc tế</div>
       </div>
     </div>
-    <nav class="space-y-2 text-sm">
+    <nav class="space-y-1 text-sm">
       <a href="#home" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="closeMenu()">🏠 Trang chủ</a>
+      
+      <div class="text-xs font-semibold text-gray-500 mt-4 mb-2 px-3">CHÂU ÂU - SCHENGEN</div>
       <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('france'); closeMenu();">🇫🇷 Pháp</a>
       <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('italy'); closeMenu();">🇮🇹 Ý</a>
-      <div class="border-t mt-4 pt-4 text-xs muted">@Nhật - Cẩm nang Phiên bản 2025 V2.2</div>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('germany'); closeMenu();">🇩🇪 Đức</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('spain'); closeMenu();">🇪🇸 Tây Ban Nha</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('netherlands'); closeMenu();">🇳🇱 Hà Lan</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('norway'); closeMenu();">🇳🇴 Na Uy</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('sweden'); closeMenu();">🇸🇪 Thụy Điển</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('denmark'); closeMenu();">🇩🇰 Đan Mạch</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('switzerland'); closeMenu();">🇨🇭 Thụy Sĩ</a>
+      
+      <div class="text-xs font-semibold text-gray-500 mt-4 mb-2 px-3">CHÂU ÂU KHÁC</div>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('uk'); closeMenu();">🇬🇧 Anh (UK)</a>
+      
+      <div class="text-xs font-semibold text-gray-500 mt-4 mb-2 px-3">CHÂU ĐẠI DƯƠNG</div>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('australia'); closeMenu();">🇦🇺 Úc</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('newzealand'); closeMenu();">🇳🇿 New Zealand</a>
+      
+      <div class="text-xs font-semibold text-gray-500 mt-4 mb-2 px-3">CHÂU MỸ</div>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('usa'); closeMenu();">🇺🇸 Mỹ</a>
+      <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('canada'); closeMenu();">🇨🇦 Canada</a>
+      
+      <div class="border-t mt-4 pt-4 text-xs text-gray-500">@Nhật - Phiên bản V2.3</div>
     </nav>
   </aside>
 
@@ -357,6 +342,151 @@
             <span class="badge">15-45 ngày</span>
           </div>
         </div>
+
+        <!-- Card Đức -->
+        <div class="country-card" onclick="openModal('germany')">
+          <div class="country-flag">🇩🇪</div>
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">Đức</h2>
+          <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, hội nghị</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="badge">Schengen</span>
+            <span class="badge">15-45 ngày</span>
+          </div>
+        </div>
+
+
+<!-- Card Tây Ban Nha -->
+<div class="country-card" onclick="openModal('spain')">
+  <div class="country-flag">🇪🇸</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Tây Ban Nha</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card Hà Lan -->
+<div class="country-card" onclick="openModal('netherlands')">
+  <div class="country-flag">🇳🇱</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Hà Lan</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, thương mại</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card Na Uy -->
+<div class="country-card" onclick="openModal('norway')">
+  <div class="country-flag">🇳🇴</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Na Uy</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, thăm thân</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card Thụy Điển -->
+<div class="country-card" onclick="openModal('sweden')">
+  <div class="country-flag">🇸🇪</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Thụy Điển</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, hội nghị</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card Đan Mạch -->
+<div class="country-card" onclick="openModal('denmark')">
+  <div class="country-flag">🇩🇰</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Đan Mạch</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, thương mại</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card Thụy Sĩ -->
+<div class="country-card" onclick="openModal('switzerland')">
+  <div class="country-flag">🇨🇭</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Thụy Sĩ</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, hội nghị</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Schengen</span>
+    <span class="badge">10-15 ngày</span>
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- CHÂU ÂU KHÁC -->
+<!-- =============================================== -->
+
+<!-- Card Anh (UK) -->
+<div class="country-card" onclick="openModal('uk')">
+  <div class="country-flag">🇬🇧</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Anh (UK)</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Không Schengen</span>
+    <span class="badge">15-20 ngày</span>
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- CHÂU ĐẠI DƯƠNG -->
+<!-- =============================================== -->
+
+<!-- Card Úc -->
+<div class="country-card" onclick="openModal('australia')">
+  <div class="country-flag">🇦🇺</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Úc</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">E-Visa</span>
+    <span class="badge">15-30 ngày</span>
+  </div>
+</div>
+
+<!-- Card New Zealand -->
+<div class="country-card" onclick="openModal('newzealand')">
+  <div class="country-flag">🇳🇿</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">New Zealand</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">E-Visa</span>
+    <span class="badge">20-30 ngày</span>
+  </div>
+</div>
+
+<!-- =============================================== -->
+<!-- CHÂU MỸ -->
+<!-- =============================================== -->
+
+<!-- Card Mỹ -->
+<div class="country-card" onclick="openModal('usa')">
+  <div class="country-flag">🇺🇸</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Mỹ</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Phỏng vấn</span>
+    <span class="badge">30-60 ngày</span>
+  </div>
+</div>
+
+<!-- Card Canada -->
+<div class="country-card" onclick="openModal('canada')">
+  <div class="country-flag">🇨🇦</div>
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">Canada</h2>
+  <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, học tập</p>
+  <div class="flex gap-2 flex-wrap">
+    <span class="badge">Online</span>
+    <span class="badge">30-60 ngày</span>
+  </div>
+</div>
 
       </div>
     </div>
@@ -943,7 +1073,8 @@
   </div>
 </div>
   </div>
-  <!-- Modal Ý (tương tự Pháp, chỉ thay đổi ID và một số thông tin cụ thể) -->
+
+  <!-- Modal Ý-->
   <div id="modal-italy" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -1657,6 +1788,595 @@
   </div>
 </div>
   </div>
+
+ <!-- Modal Đức -->
+  <div id="modal-germany" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('germany')">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">DE</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Đức</h2>
+            <p class="text-blue-100 mt-2">Hướng dẫn chi tiết hồ sơ visa Đức (Schengen)</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản -->
+        <section class="card fade">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+          <div class="space-y-3 text-gray-700 text-sm">
+            <div>
+              <p><strong>1. VFS GLOBAL Đức - TP.HCM</strong></p>
+              <p>Toà nhà President, Lầu 11<br>
+              93 Nguyễn Du, phường Bến Nghé, Quận 1, Tp.HCM</p>
+            </div>
+            
+            <div>
+              <p><strong>3. VFS GLOBAL Đức - Hà Nội</strong></p>
+              <p>Ocean Park Building, Tầng 3<br>
+              Tòa nhà Ocean Park, số 1 Đào Duy Anh<br>
+              Quận Đống Đa, Hà Nội</p>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-3">Thời gian & Lưu ý</h4>
+          <div class="info-box">
+            <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 15 ngày, có thể kéo dài 20-25 ngày tùy hồ sơ</p>
+            <p class="text-sm mt-2 text-gray-600">Tính từ thời điểm nộp hồ sơ vào VFS. Cần book lịch hẹn trước.</p>
+          </div>
+          
+          <div class="warning-box mt-4">
+            <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1">
+              <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
+              <li>Không được mượn Hộ chiếu trong quá trình xét duyệt</li>
+              <li>Hồ sơ sao y công chứng trên khổ giấy A4, không cắt nhỏ và dấu sao y không quá 3 tháng tính từ thời điểm nộp hồ sơ</li>
+              <li>Các giấy tờ GỐC sẽ được LSQ/DSQ giữ lại trong suốt quá trình xét duyệt, bản gốc sẽ được trả cùng với kết quả</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-6">
+        <h4 class="font-bold text-lg mb-3">📸 Yêu cầu hình chụp</h4>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+            <li>Nền trắng, đúng chuẩn chung Châu Âu, không trùng với bất kỳ hình nào trên hộ chiếu</li>
+            <li>Khuôn mặt ở chính giữa chiếm 80% diện tích của hình</li>
+            <li>Chụp từ xương vai trở lên, không cười thấy răng</li>
+            <li>Vén tóc mái để lộ phần chân mày và trán, vén tóc 2 bên tai để lộ tai</li>
+            <li>Không đeo trang sức, nón, kính</li>
+            <li>Không photoshop, để mặt mộc</li>
+            <li>Màu tóc trong hình thẻ và màu tóc khi đi lăn tay phải cùng 1 màu</li>
+            <li>Hình không được bóng sáng trên mặt, phông nền không đổ bóng và nền màu trắng sáng</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+        <!-- 1. Hồ sơ cá nhân -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">👤 1. Hồ sơ cá nhân</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="germany-personal-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="germany-personal-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="doc-than">Độc thân</option>
+                <option value="ket-hon">Kết hôn</option>
+                <option value="ly-hon">Ly hôn</option>
+                <option value="goa">Góa</option>
+                <option value="con-nuoi">Con nuôi</option>
+                <option value="doi-ten">Đổi tên</option>
+                <option value="tre-em">Trẻ em</option>
+              </select>
+              <button onclick="showAllItems('germany', 'personal')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('germany', 'personal')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="doc-than">
+              <h4 class="font-bold text-indigo-700 mb-3">Độc thân</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Khai sinh (nếu cần)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Tránh để tài chính phụ thuộc hoàn toàn vào người khác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="ket-hon">
+              <h4 class="font-bold text-indigo-700 mb-3">Kết hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy đăng ký kết hôn (công chứng)</li>
+                <li>Nếu kết hôn ở nước ngoài: bản dịch công chứng + hợp pháp hóa nếu cần</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hồ sơ tài chính hai vợ chồng nếu đi cùng hoặc bảo lãnh lẫn nhau</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Nên xin trích lục mới nếu giấy kết hôn trích lục đã lâu</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="ly-hon">
+              <h4 class="font-bold text-indigo-700 mb-3">Ly hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Quyết định ly hôn / bản án ly hôn (bản sao công chứng)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Thư giải trình (Cover Letter) nêu lý do và ràng buộc tại VN (nếu cần)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Nếu có con nhỏ, cần chứng minh quyền nuôi và ràng buộc gia đình</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="goa">
+              <h4 class="font-bold text-indigo-700 mb-3">Góa</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy chứng tử của vợ/chồng (bản công chứng)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy xác nhận cư trú (CT07/CT08)</li>
+                <li>Khai sinh con (nếu có)</li>
+                <li>02 tấm hình 2,5 x 3,5</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Trường hợp có người bảo lãnh (chồng, con), cần thêm giấy tờ chứng minh</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="con-nuoi">
+              <h4 class="font-bold text-indigo-700 mb-3">Con nuôi / Giám hộ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Quyết định nhận con nuôi, giấy tờ giám hộ, khai sinh cập nhật(nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="doi-ten">
+              <h4 class="font-bold text-indigo-700 mb-3">Đổi tên</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Quyết định đổi tên, giấy tờ chứng minh tên cũ — tên mới, bản công chứng nếu cần</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="personal" data-item="tre-em">
+              <h4 class="font-bold text-indigo-700 mb-3">Trẻ em đi cùng / đi một mình</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy khai sinh, giấy đồng ý của cả cha mẹ (công chứng), thông tin người được uỷ quyền dẫn đi</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Giấy đồng ý phải công chứng được ký bởi cả cha và mẹ (trừ trường hợp có quy định khác)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Hồ sơ tài chính -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">💰 2. Hồ sơ tài chính</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="germany-financial-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="germany-financial-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="dang-lam">Đang đi làm</option>
+                <option value="chu-dn">Chủ doanh nghiệp</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="noi-tro">Nội trợ</option>
+                <option value="bao-lanh">Người được bảo lãnh</option>
+              </select>
+              <button onclick="showAllItems('germany', 'financial')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('germany', 'financial')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="financial" data-item="dang-lam">
+              <h4 class="font-bold text-indigo-700 mb-3">Người đi làm (lương)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sao kê ngân hàng 3 tháng (tài khoản nhận lương)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có), kèm xác nhận lương 3 tháng gần nhất</li>
+                <li>Không nên mở sổ tiết kiệm lớn ngay trước khi nộp hồ sơ - sổ nên được mở trước ít nhất 3-6 tháng</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="financial" data-item="chu-dn">
+              <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp / hộ kinh doanh</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sao kê ngân hàng 3 tháng tài khoản công ty (nếu chủ đứng tên 1 mình trên DKKD)</li>
+                <li>Sao kê ngân hàng 3 tháng tài khoản cá nhân (nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="financial" data-item="freelancer">
+              <h4 class="font-bold text-indigo-700 mb-3">Freelancer / Làm tự do</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Hợp đồng dịch vụ, hóa đơn bán hàng, chứng minh khác về nguồn thu nhập</li>
+                <li>Sao kê tài khoản nhận thanh toán 3 tháng</li>
+                <li>Chuẩn bị thư giải trình nguồn thu nhập</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="financial" data-item="noi-tro">
+            <h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
+                <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, ...) nếu không tự chứng minh được tài chính</li>
+                <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
+             </ul>
+            </div>
+          <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="financial" data-item="bao-lanh">
+            <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh</h4>
+            <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư bảo lãnh tài chính của người thân + CCCD/Hộ chiếu người bảo lãnh + giấy tờ chứng minh quan hệ (khai kinh, kết hôn, hợp đồng ...)</li>
+            <li>Sao kê, sổ tiết kiệm người bảo lãnh</li>
+            <li>Lưu ý: Nên nộp kèm hồ sơ tài chính cá nhân</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="info-box mt-4">
+        <p class="font-semibold">💡 Lưu ý quan trọng:</p>
+        <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+          <li>Tài chính nên tương ứng 100-150 triệu/người</li>
+          <li>Không nên nộp "sổ mới mở" sát ngày nộp</li>
+          <li>Lãnh sự quan tâm đến nguồn tiền - thời gian - tính ổn định hơn là số dư</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Hồ sơ công việc -->
+    <section class="card fade">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <h3 class="section-title">💼 3. Hồ sơ công việc</h3>
+        <div class="flex gap-2 items-center flex-wrap">
+          <input id="germany-employment-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="germany-employment-filter" class="border rounded p-2 text-sm">
+            <option value="all">— Tất cả —</option>
+            <option value="nhan-vien">Nhân viên</option>
+            <option value="chu-dn">Chủ doanh nghiệp</option>
+            <option value="can-bo">Cán bộ</option>
+            <option value="sinh-vien">Sinh viên</option>
+            <option value="nghi-huu">Nghỉ hưu</option>
+          </select>
+          <button onclick="showAllItems('germany', 'employment')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('germany', 'employment')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="employment" data-item="nhan-vien">
+          <h4 class="font-bold text-indigo-700 mb-3">Nhân viên (HĐLĐ)</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Hợp đồng lao động có dấu</li>
+            <li>Xác nhận công việc có dấu</li>
+            <li>Bảng lương 3 tháng có dấu</li>
+            <li>Thư xác nhận nghỉ phép có dấu</li>
+            <li>Nếu công ty nhỏ: thư xác nhận tay có chữ ký giám đốc + con dấu</li>
+            <li>Toàn bộ hình chụp từ VSSID</li>
+          </ul>
+          <p class="text-sm text-gray-600 mt-2">💡 Thư xác nhận cần có ngày nghỉ phép trùng với thời gian du lịch</p>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="employment" data-item="chu-dn">
+          <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Giấy phép kinh doanh</li>
+            <li>Giấy phép kinh doanh</li>
+            <li>Biên lai thuế 3 tháng hoặc quý gần nhất</li>
+            <li>Báo cáo thuế 3 tháng, hợp đồng mua bán, ảnh cơ sở (nếu có) - trường hợp không phải đóng thuế hoặc khấu trừ thuế</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="employment" data-item="can-bo">
+          <h4 class="font-bold text-indigo-700 mb-3">Cán bộ, công chức</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Quyết định bổ nhiệm có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận công tác có đóng dấu cơ quan</li>
+            <li>Giấy xác nhận nghỉ phép có đóng dấu cơ quan</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="employment" data-item="sinh-vien">
+          <h4 class="font-bold text-indigo-700 mb-3">Sinh viên</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Giấy xác nhận sinh viên, giấy xin nghỉ học, thư bảo lãnh tài chính của cha mẹ</li>
+            <li>Giấy xin nghỉ học</li>
+            <li>Thư bảo lãnh tài chính của cha mẹ</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="employment" data-item="nghi-huu">
+          <h4 class="font-bold text-indigo-700 mb-3">Người nghỉ hưu</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Sổ hưu, quyết định hưởng lương hưu, sao kê nhận lương hưu</li>
+            <li>Quyết định hưởng lương hưu/về hưu</li>
+            <li>VSSID quá trình đóng BHXH</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Hồ sơ chuyến đi -->
+    <section class="card fade">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <h3 class="section-title">✈️ 4. Hồ sơ chuyến đi</h3>
+        <div class="flex gap-2 items-center flex-wrap">
+          <input id="germany-travel-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="germany-travel-filter" class="border rounded p-2 text-sm">
+            <option value="all">— Tất cả —</option>
+            <option value="dulich">Du lịch</option>
+            <option value="congtac">Công tác</option>
+            <option value="incentive">Incentive trip</option>
+            <option value="tham-than">Thăm thân</option>
+          </select>
+          <button onclick="showAllItems('germany', 'travel')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('germany', 'travel')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="travel" data-item="dulich">
+          <h4 class="font-bold text-indigo-700 mb-3">Du lịch (cá nhân / tour)</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Vé máy bay khứ hồi / booking</li>
+            <li>Xác nhận đặt phòng khách sạn</li>
+            <li>Lịch trình chi tiết</li>
+            <li>Bảo hiểm du lịch (≥30.000 EUR)</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="travel" data-item="congtac">
+          <h4 class="font-bold text-indigo-700 mb-3">Công tác / Hội nghị</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư mời có đầy đủ thông tin người mời, người được mời</li>
+            <li>Lịch trình hội nghị có logo con dấu đi kèm</li>
+            <li>Giấy cử đi công tác của tổ chức/công ty người đi</li>
+            <li>Chứng minh mối quan hệ hợp tác giữa hai bên (hợp đồng,xác nhận, email,...)</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="travel" data-item="incentive">
+          <h4 class="font-bold text-indigo-700 mb-3">Incentive trip</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư mời/ quyết định thưởng của công ty, danh sách đoàn có dấu</li>
+            <li>Xác nhận công ty chi trả chi phí (nếu có)</li>
+            <li>Bộ hồ sơ tài chính của công ty chi trả</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="travel" data-item="tham-than">
+          <h4 class="font-bold text-indigo-700 mb-3">Thăm thân</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư mời của người thân, bản sao hộ chiếu/giấy tờ cư trú người mời, giấy tờ chứng minh quan hệ</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="warning-box mt-4">
+        <p class="font-semibold">💡 Lưu ý:</p>
+        <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+          <li>Lịch trình nên logic, đúng mục đích, không quá dày</li>
+          <li>Cần có thông tin chi tiết người xin Visa trên "booking giữ chỗ"</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. Hồ sơ đặc biệt -->
+    <section class="card fade">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <h3 class="section-title">⭐ 5. Hồ sơ đặc biệt</h3>
+        <div class="flex gap-2 items-center flex-wrap">
+          <input id="germany-special-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <select id="germany-special-filter" class="border rounded p-2 text-sm">
+            <option value="all">— Tất cả —</option>
+            <option value="missing-docs">Thiếu giấy tờ</option>
+            <option value="visa-refused">Bị từ chối visa</option>
+            <option value="relative-abroad">Có người thân ở nước ngoài</option>
+          </select>
+          <button onclick="showAllItems('germany', 'special')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('germany', 'special')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="special" data-item="missing-docs">
+          <h4 class="font-bold text-indigo-700 mb-3">Thiếu giấy tờ phổ biến</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Mất hộ khẩu: dùng CT07/CT08</li>
+            <li>Không có sổ tiết kiệm: sao kê ngân hàng + bộ hồ sơ bảo lãnh</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="special" data-item="visa-refused">
+          <h4 class="font-bold text-indigo-700 mb-3">Đã bị từ chối visa</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Chuẩn bị thư giải trình, bổ sung giấy tờ còn thiếu, trung thực khi khai hồ sơ</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="germany" data-group="special" data-item="relative-abroad">
+          <h4 class="font-bold text-indigo-700 mb-3">Có người thân ở nước đến</h4>
+          <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+            <li>Thư mời + chứng minh quan hệ; chứng minh ràng buộc tại VN (việc làm, tài sản)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="info-box mt-4">
+        <p class="font-semibold">💡 Lưu ý:</p>
+        <p class="text-sm mt-1">Hồ sơ đặc biệt nên có thư giải trình riêng (Cover Letter), trình bày lịch sử, mục đích, và cam kết rõ ràng</p>
+      </div>
+    </section>
+
+    <!-- 6. Trường hợp thực tế bổ sung -->
+    <section class="card fade">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <h3 class="section-title">📝 6. Trường hợp thực tế bổ sung</h3>
+        <div class="flex gap-2 items-center flex-wrap">
+          <input id="germany-cases-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+          <button onclick="showAllItems('germany', 'cases')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+          <button onclick="resetFilter('germany', 'cases')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="germany" data-group="cases">
+          <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp mới mở DKKD dưới 6 tháng</h4>
+          <p class="text-sm text-gray-600 mb-2">Chưa có sao kê, chưa nộp thuế</p>
+          <div class="bg-yellow-50 p-3 rounded mt-2">
+            <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
+            <p class="text-sm">DKKD mới: nộp hợp đồng đầu vào - đầu ra + hóa đơn, hình ảnh hoạt động</p>
+          </div>
+          <div class="bg-green-50 p-3 rounded mt-2">
+            <p class="font-semibold text-green-700 mb-2">✓ Hồ sơ đề xuất:</p>
+            <p class="text-sm">DKKD <6 tháng: tăng rủi ro nghi ngờ hồ sơ tài chính yếu, nên có thêm tài sản cá nhân / sổ tiết kiệm riêng</p>
+          </div>
+          <div class="info-box mt-2">
+            <p class="text-sm">💡 Nên có thêm tài sản cá nhân / sổ tiết kiệm riêng, tài sản mạnh - chứng minh khả năng tài chính và ràng buộc</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="germany" data-group="cases">
+          <h4 class="font-bold text-indigo-700 mb-3">Người đi làm mới đổi công ty</h4>
+          <div class="bg-yellow-50 p-3 rounded mt-2">
+            <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
+            <p class="text-sm">Đổi công ty: nộp hợp đồng cũ + mới, thư giải trình, VSSID đầy đủ thu nhập từ 2 công ty</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="germany" data-group="cases">
+          <h4 class="font-bold text-indigo-700 mb-3">Mất hộ chiếu cũ</h4>
+            <div class="info-box mt-2">
+            <p class="text-sm">💡 HC cũ mất có thể nộp bản photo, scan HC cũ/visa cũ hoặc hình ảnh du lịch trước đây</p>
+          </div>
+        </div>
+        
+        <div class="bg-white border-2 border-indigo-100 rounded-lg p-4 fade" data-country="germany" data-group="cases">
+          <h4 class="font-bold text-indigo-700 mb-3">Người làm việc tự do online / Freelancer</h4>
+          <div class="bg-yellow-50 p-3 rounded mt-2">
+            <p class="font-semibold text-yellow-700 mb-2">⚠️ Trường hợp thiếu:</p>
+            <p class="text-sm">Freelancer: hợp đồng dịch vụ / thanh toán quốc tế PayPal / sao kê nhận tiền ...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Các trường hợp đặc biệt khác -->
+    <section class="card fade">
+      <h3 class="section-title">🎯 Các trường hợp đặc biệt khác</h3>
+      
+      <div class="space-y-4">
+        <!-- Công tác từ công ty nước ngoài -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 rounded-lg p-4">
+          <h4 class="font-bold text-indigo-800 mb-3 text-lg">🌍 Công tác từ công ty nước ngoài</h4>
+          
+          <div class="bg-white rounded p-3 mb-3">
+            <p class="font-semibold text-gray-800 mb-2">Giấy tờ yêu cầu:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li>Letter of Invitation trên letterhead có logo, địa chỉ, chữ ký người có thẩm quyền</li>
+              <li>Mục đích chuyến đi rõ ràng: họp, ký kết, khảo sát, đào tạo</li>
+              <li>Thời gian lưu trú cụ thể</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded p-3">
+            <p class="font-semibold text-gray-800 mb-2">Hồ sơ bổ sung:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li>Giấy tờ pháp lý của công ty mời: giấy DKKD, tax code hoặc website chính thức</li>
+              <li>Chứng minh mối quan hệ hợp tác: hợp đồng, email trao đổi, biên bản làm việc</li>
+              <li>Nếu thư mời bằng tiếng nước sở tại → nên có bản dịch tiếng Anh song ngữ</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Incentive trip -->
+        <div class="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-lg p-4">
+          <h4 class="font-bold text-purple-800 mb-3 text-lg">🎁 Incentive trip (du lịch khen thưởng / thưởng doanh số)</h4>
+          
+          <div class="bg-white rounded p-3 mb-3">
+            <p class="font-semibold text-gray-800 mb-2">Giấy tờ yêu cầu:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li><strong>Thư mời / Quyết định thưởng chuyến đi</strong> của công ty VN (ghi rõ tên người được đi, lý do, thời gian, chi phí do ai chi trả)</li>
+              <li><strong>Thư xác nhận tài trợ chi phí</strong></li>
+              <li><strong>DKKD + XNSD + Biên lai thuế 3 tháng</strong></li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded p-3">
+            <p class="font-semibold text-gray-800 mb-2">Hồ sơ bổ sung:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li><strong>Danh sách đoàn incentive có đóng dấu công ty</strong></li>
+              <li><strong>Chứng minh quan hệ công tác / hợp đồng đại lý / thành tích doanh số</strong></li>
+              <li>Nếu <strong>công ty mời ở nước ngoài</strong> → thư mời cần <strong>con dấu + chữ ký đại diện hợp pháp</strong></li>
+              <li>Nếu <strong>công ty tài trợ ở Việt Nam</strong> → chỉ cần công chứng chữ ký sống</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Tham dự hội nghị -->
+        <div class="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">
+          <h4 class="font-bold text-green-800 mb-3 text-lg">📊 Tham dự hội nghị, triển lãm, hội thảo quốc tế</h4>
+          
+          <div class="bg-white rounded p-3 mb-3">
+            <p class="font-semibold text-gray-800 mb-2">Giấy tờ yêu cầu:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li><strong>Giấy mời chính thức từ BTC</strong> (Letter of Invitation / Conference Invitation)</li>
+              <li><strong>Lịch trình / chương trình hội nghị</strong> (Agenda / Schedule)</li>
+              <li><strong>Thư cử đi công tác của cơ quan VN</strong></li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded p-3">
+            <p class="font-semibold text-gray-800 mb-2">Hồ sơ bổ sung:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li>Thư xác nhận đã đăng ký / đã thanh toán phí tham dự</li>
+              <li>Vé hội nghị / giấy tờ xác nhận tài khoản đăng ký online</li>
+              <li>Nếu thư mời do <strong>tổ chức quốc tế (EU, WHO, UN, v.v.)</strong> cấp</li>
+              <li>Nếu do <strong>công ty tư nhân nước ngoài</strong> cấp → LSQ có thể yêu cầu bản scan dấu mộc gốc / email xác nhận kèm domain công ty</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Doanh nghiệp VN bảo lãnh -->
+        <div class="bg-gradient-to-r from-orange-50 to-red-50 border-2 border-orange-200 rounded-lg p-4">
+          <h4 class="font-bold text-orange-800 mb-3 text-lg">🏢 Doanh nghiệp Việt Nam bảo lãnh cho nhân viên đi công tác / hội nghị / đào tạo</h4>
+          
+          <div class="bg-white rounded p-3 mb-3">
+            <p class="font-semibold text-gray-800 mb-2">Giấy tờ yêu cầu:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li><strong>Quyết định cử đi công tác / công văn bảo lãnh</strong> (ghi rõ nội dung, chi phí, thời gian, vị trí công tác)</li>
+              <li><strong>Thư xác nhận tài trợ chi phí</strong></li><div class="bg-white rounded p-3">
+            <p class="font-semibold text-gray-800 mb-2">Hồ sơ bổ sung:</p>
+            <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+              <li><strong>Bảng lương 3 tháng</strong> gần nhất, hợp đồng lao động, giấy phép kinh doanh + XNSD công ty VN</li>
+              <li><strong>Không cần hợp pháp hóa</strong>, chỉ cần dịch công chứng</li>
+              <li>Nên có <strong>bản song ngữ + dấu tròn công ty rõ ràng</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+</div>
+  </div>
+
+
+
+
   <footer class="text-center py-8 text-gray-600">
     <p>© 2025 Tứ Nhật - Visa · Cẩm nang hồ sơ V2.2. </p>
 <p> Tất cả thông tin mang tính tham khảo, cần kiểm tra lại với chuyên viên Visa với từng nước để biết yêu cầu cụ thể chính xác cho từng trường hợp.</p>
@@ -1769,7 +2489,7 @@ function resetFilter(country, group) {
 document.addEventListener('DOMContentLoaded', function() {
   // France
   const groups = ['personal', 'financial', 'employment', 'travel', 'special', 'cases'];
-  const countries = ['france', 'italy'];
+  const countries = ['france', 'italy', 'germany', 'spain','netherlands','norway','sweden','denmark','switzerland','uk','australia','newzealand','usa','canada'];
   
   countries.forEach(country => {
     groups.forEach(group => {
